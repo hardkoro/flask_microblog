@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-02-10 21:00+0300\n"
+"POT-Creation-Date: 2022-02-11 09:15+0300\n"
 "PO-Revision-Date: 2022-02-10 20:58+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -19,61 +19,69 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 
-#: app/__init__.py:26
+#: app/__init__.py:27
 msgid "Please log in to access this page."
 msgstr "Для доступа к данной страницей войдите в свой профиль."
 
-#: app/forms.py:12 app/forms.py:19 app/forms.py:39
+#: app/forms.py:13 app/forms.py:20 app/forms.py:40
 msgid "Username"
 msgstr "Пользователь"
 
-#: app/forms.py:13 app/forms.py:21 app/forms.py:72
+#: app/forms.py:14 app/forms.py:22 app/forms.py:75
 msgid "Password"
 msgstr "Пароль"
 
-#: app/forms.py:14
+#: app/forms.py:15
 msgid "Remember Me"
 msgstr "Запомнить меня"
 
-#: app/forms.py:15 app/templates/login.html:5
+#: app/forms.py:16 app/templates/login.html:5
 msgid "Sign In"
 msgstr "Войти"
 
-#: app/forms.py:20 app/forms.py:67
+#: app/forms.py:21 app/forms.py:70
 msgid "Email"
 msgstr "Адрес электронной почты"
 
-#: app/forms.py:23 app/forms.py:74
+#: app/forms.py:24 app/forms.py:77
 msgid "Repeat Password"
 msgstr "Повторите пароль"
 
-#: app/forms.py:25 app/templates/register.html:5
+#: app/forms.py:26 app/templates/register.html:5
 msgid "Register"
 msgstr "Регистрация"
 
-#: app/forms.py:30 app/forms.py:51
+#: app/forms.py:31 app/forms.py:54
 msgid "Please use a different username!"
 msgstr "Пожалуйста, используйте другое имя пользователя!"
 
-#: app/forms.py:35
+#: app/forms.py:36
 msgid "Please use a different email address!"
 msgstr "Пожалуйста, используйте другой адрес электронной почты!"
 
-#: app/forms.py:40
+#: app/forms.py:42
 msgid "About me"
 msgstr "О себе"
 
-#: app/forms.py:41 app/forms.py:55 app/forms.py:63
+#: app/forms.py:44 app/forms.py:58 app/forms.py:66
 msgid "Submit"
 msgstr "Отправить"
 
-#: app/forms.py:60
+#: app/forms.py:63
 msgid "Say something"
 msgstr "Напишите что-нибудь"
 
-#: app/forms.py:68 app/forms.py:76
+#: app/forms.py:71 app/forms.py:79
 msgid "Request Password Reset"
 msgstr "Сбросить пароль"
+
+#: app/translate.py:12
+msgid "Error! The translation service is not configured."
+msgstr ""
+
+#: app/translate.py:24
+msgid "Error! The translation service failed."
+msgstr ""
 
 #: app/templates/404.html:4
 msgid "Page Not Found"
@@ -96,27 +104,35 @@ msgstr "Администратор сайта был уведомлен. При�
 msgid "%(username)s said %(when)s"
 msgstr "%(username)s написал(а) %(when)s"
 
-#: app/templates/base.html:13
+#: app/templates/_post.html:25
+msgid "Translate"
+msgstr ""
+
+#: app/templates/base.html:18
+msgid "Error! Could not contact server."
+msgstr ""
+
+#: app/templates/base.html:28
 msgid "Welcome to Microblog"
 msgstr "Добро пожаловать в Microblog"
 
-#: app/templates/base.html:31
+#: app/templates/base.html:46
 msgid "Home"
 msgstr "Главная"
 
-#: app/templates/base.html:32
+#: app/templates/base.html:47
 msgid "Explore"
 msgstr "Бездна"
 
-#: app/templates/base.html:36
+#: app/templates/base.html:51
 msgid "Login"
 msgstr "Войти"
 
-#: app/templates/base.html:38
+#: app/templates/base.html:53
 msgid "Profile"
 msgstr "Профиль"
 
-#: app/templates/base.html:39
+#: app/templates/base.html:54
 msgid "Logout"
 msgstr "Выйти"
 

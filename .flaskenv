@@ -4,3 +4,5 @@ _from FLASK_ENV=production
 
 MAIL_SERVER=localhost
 MAIL_PORT=8025
+
+MS_TRANSLATOR_KEY=3eeabae9261b4d96bcaf1057f8f1afaf

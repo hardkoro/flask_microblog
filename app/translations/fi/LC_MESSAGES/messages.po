@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-02-11 09:15+0300\n"
+"POT-Creation-Date: 2022-02-11 10:40+0300\n"
 "PO-Revision-Date: 2022-02-10 20:59+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fi\n"
@@ -20,51 +20,51 @@ msgstr ""
 
 #: app/__init__.py:27
 msgid "Please log in to access this page."
-msgstr ""
+msgstr "Kirjaudu sisään päästäksesi tälle sivulle."
 
 #: app/forms.py:13 app/forms.py:20 app/forms.py:40
 msgid "Username"
-msgstr ""
+msgstr "Käyttajätunnnus"
 
 #: app/forms.py:14 app/forms.py:22 app/forms.py:75
 msgid "Password"
-msgstr ""
+msgstr "Salasana"
 
 #: app/forms.py:15
 msgid "Remember Me"
-msgstr ""
+msgstr "Muista minut"
 
 #: app/forms.py:16 app/templates/login.html:5
 msgid "Sign In"
-msgstr ""
+msgstr "Kirjaudu sisään"
 
 #: app/forms.py:21 app/forms.py:70
 msgid "Email"
-msgstr ""
+msgstr "Sähköposti"
 
 #: app/forms.py:24 app/forms.py:77
 msgid "Repeat Password"
-msgstr ""
+msgstr "Toista salasana"
 
 #: app/forms.py:26 app/templates/register.html:5
 msgid "Register"
-msgstr ""
+msgstr "Rekisteröidy"
 
 #: app/forms.py:31 app/forms.py:54
 msgid "Please use a different username!"
-msgstr ""
+msgstr "Käytä toista käyttäjätunnusta!"
 
 #: app/forms.py:36
 msgid "Please use a different email address!"
-msgstr ""
+msgstr "Käytä toista sähköpostiosoitetta!"
 
 #: app/forms.py:42
 msgid "About me"
-msgstr ""
+msgstr "Minusta"
 
 #: app/forms.py:44 app/forms.py:58 app/forms.py:66
 msgid "Submit"
-msgstr ""
+msgstr "Lähetä"
 
 #: app/forms.py:63
 msgid "Say something"
@@ -72,135 +72,135 @@ msgstr ""
 
 #: app/forms.py:71 app/forms.py:79
 msgid "Request Password Reset"
-msgstr ""
+msgstr "Pyydä salasanan palautusta"
 
 #: app/translate.py:12
 msgid "Error! The translation service is not configured."
-msgstr ""
+msgstr "Virhe! Käännöspalvelua ei ole määritetty."
 
 #: app/translate.py:24
 msgid "Error! The translation service failed."
-msgstr ""
+msgstr "Virhe! Käännöspalvelua epäonnistui."
 
 #: app/templates/404.html:4
 msgid "Page Not Found"
-msgstr ""
+msgstr "Sivua ei löydetty"
 
 #: app/templates/404.html:5 app/templates/500.html:6
 msgid "Return to the Main Page"
-msgstr ""
+msgstr "Palaa pääsivulle"
 
 #: app/templates/500.html:4
 msgid "An unexpected error has occurred"
-msgstr ""
+msgstr "Odottamaton virhe on tapahtunut"
 
 #: app/templates/500.html:5
 msgid "The administrator has been notified. Sorry for the inconvenience!"
-msgstr ""
+msgstr "Ylläpitäjälle on ilmoitettu. Anteeksi häiriö!"
 
 #: app/templates/_post.html:14
 #, python-format
 msgid "%(username)s said %(when)s"
-msgstr ""
+msgstr "%(username)s sanoi %(when)s"
 
 #: app/templates/_post.html:25
 msgid "Translate"
-msgstr ""
+msgstr "Kääntää"
 
 #: app/templates/base.html:18
 msgid "Error! Could not contact server."
-msgstr ""
+msgstr "Virhe! Ei saatu yhteyttä palvelimeen."
 
 #: app/templates/base.html:28
 msgid "Welcome to Microblog"
-msgstr ""
+msgstr "Tervetuloa Mikroblogiin"
 
 #: app/templates/base.html:46
 msgid "Home"
-msgstr ""
+msgstr "Koti"
 
 #: app/templates/base.html:47
 msgid "Explore"
-msgstr ""
+msgstr "Tutkia"
 
 #: app/templates/base.html:51
 msgid "Login"
-msgstr ""
+msgstr "Kirjaudu sisään"
 
 #: app/templates/base.html:53
 msgid "Profile"
-msgstr ""
+msgstr "Profiili"
 
 #: app/templates/base.html:54
 msgid "Logout"
-msgstr ""
+msgstr "Kirjautua ulos"
 
 #: app/templates/edit_profile.html:5
 msgid "Edit Profile"
-msgstr ""
+msgstr "Muokkaa profiilia"
 
 #: app/templates/index.html:5
 #, python-format
 msgid "Hello, %(username)s!"
-msgstr ""
+msgstr "Hei, %(username)s!"
 
 #: app/templates/index.html:20 app/templates/user.html:43
 msgid "Newer posts"
-msgstr ""
+msgstr "Uudemmat viestit"
 
 #: app/templates/index.html:25 app/templates/user.html:48
 msgid "Older posts"
-msgstr ""
+msgstr "Vanhemmat viestit"
 
 #: app/templates/login.html:12
 msgid "New User?"
-msgstr ""
+msgstr "Uusi käyttäjä?"
 
 #: app/templates/login.html:12
 msgid "Click to Register!"
-msgstr ""
+msgstr "Klikkaa rekisteröityäksesi!"
 
 #: app/templates/login.html:14
 msgid "Forgot Your Password?"
-msgstr ""
+msgstr "Unohditko salasanasi?"
 
 #: app/templates/login.html:15
 msgid "Click to Reset It"
-msgstr ""
+msgstr "Klikkaa nollataksesi sen"
 
 #: app/templates/reset_password.html:5
 msgid "Reset Your Password"
-msgstr ""
+msgstr "Nollaa salasanasi"
 
 #: app/templates/reset_password_request.html:5
 msgid "Reset Password"
-msgstr ""
+msgstr "Nollaa salasana"
 
 #: app/templates/user.html:8
 msgid "User"
-msgstr ""
+msgstr "Käyttäjä"
 
 #: app/templates/user.html:11
 msgid "Last seen on:"
-msgstr ""
+msgstr "Viimeksi nähty"
 
 #: app/templates/user.html:13
 msgid "followers"
-msgstr ""
+msgstr "seuraajaa"
 
 #: app/templates/user.html:13
 msgid "following"
-msgstr ""
+msgstr "seuraavaa"
 
 #: app/templates/user.html:15
 msgid "Edit your profile"
-msgstr ""
+msgstr "Muokkaa profiiliasi"
 
 #: app/templates/user.html:20
 msgid "Follow"
-msgstr ""
+msgstr "Seuraa"
 
 #: app/templates/user.html:27
 msgid "Unfollow"
-msgstr ""
+msgstr "Lopeta seuraaminen"
 

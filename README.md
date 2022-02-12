@@ -32,14 +32,24 @@ Install requirements from file requirements.txt:
 pip3 install -r requirements.txt
 ```
 
+Provide flask environmen data via ```.flaskenv```:
+
+```bash
+touch .flaskenv
+cat >> .flaskenv
+
+FLASK_APP=microblog.py  # name of the flask app
+FLASK_ENV=production    # stage (e.g. 'production', 'development')
+```
+
 Provide sensitive data via ```.env``` file:
 
 ```bash
 touch .env
 cat >> .env
 
-FLASK_APP=microblog.py  # name of the flask app
-FLASK_ENV=production    # stage (e.g. 'production', 'development')
+SECRET_KEY=paste_your_secret_key      # app's secret key
+DATABASE_URL=paste_your_database_url  # database URL
 
 MAIL_SERVER=localhost   # mail server host
 MAIL_PORT=8025          # mail server port

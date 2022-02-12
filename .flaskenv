@@ -1,0 +1,3 @@
+FLASK_APP=microblog.py
+FLASK_ENV=development
+_FLASK_ENV=production

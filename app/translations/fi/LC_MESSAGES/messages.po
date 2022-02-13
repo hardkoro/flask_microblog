@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-02-12 07:44+0300\n"
+"POT-Creation-Date: 2022-02-13 18:53+0300\n"
 "PO-Revision-Date: 2022-02-10 20:59+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fi\n"
@@ -18,63 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 
-#: app/__init__.py:27
+#: app/__init__.py:22
 msgid "Please log in to access this page."
 msgstr "Kirjaudu sisään päästäksesi tälle sivulle."
 
-#: app/forms.py:13 app/forms.py:20 app/forms.py:40
-msgid "Username"
-msgstr "Käyttajätunnnus"
-
-#: app/forms.py:14 app/forms.py:22 app/forms.py:75
-msgid "Password"
-msgstr "Salasana"
-
-#: app/forms.py:15
-msgid "Remember Me"
-msgstr "Muista minut"
-
-#: app/forms.py:16 app/templates/login.html:5
-msgid "Sign In"
-msgstr "Kirjaudu sisään"
-
-#: app/forms.py:21 app/forms.py:70
-msgid "Email"
-msgstr "Sähköposti"
-
-#: app/forms.py:24 app/forms.py:77
-msgid "Repeat Password"
-msgstr "Toista salasana"
-
-#: app/forms.py:26 app/templates/register.html:5
-msgid "Register"
-msgstr "Rekisteröidy"
-
-#: app/forms.py:31 app/forms.py:54
-msgid "Please use a different username!"
-msgstr "Käytä toista käyttäjätunnusta!"
-
-#: app/forms.py:36
-msgid "Please use a different email address!"
-msgstr "Käytä toista sähköpostiosoitetta!"
-
-#: app/forms.py:42
-msgid "About me"
-msgstr "Minusta"
-
-#: app/forms.py:44 app/forms.py:58 app/forms.py:66
-msgid "Submit"
-msgstr "Lähetä"
-
-#: app/forms.py:63
-msgid "Say something"
-msgstr ""
-
-#: app/forms.py:71 app/forms.py:79
-msgid "Request Password Reset"
-msgstr "Pyydä salasanan palautusta"
-
-#: app/translate.py:12
+#: app/translate.py:11
 msgid "Error! The translation service is not configured."
 msgstr "Virhe! Käännöspalvelua ei ole määritetty."
 
@@ -82,21 +30,127 @@ msgstr "Virhe! Käännöspalvelua ei ole määritetty."
 msgid "Error! The translation service failed."
 msgstr "Virhe! Käännöspalvelua epäonnistui."
 
-#: app/templates/404.html:4
-msgid "Page Not Found"
-msgstr "Sivua ei löydetty"
+#: app/auth/email.py:10
+#, fuzzy
+msgid "[Microblog] Reset Your Password"
+msgstr "Nollaa salasanasi"
 
-#: app/templates/404.html:5 app/templates/500.html:6
-msgid "Return to the Main Page"
-msgstr "Palaa pääsivulle"
+#: app/auth/forms.py:11 app/auth/forms.py:18 app/main/forms.py:12
+msgid "Username"
+msgstr "Käyttajätunnnus"
 
-#: app/templates/500.html:4
-msgid "An unexpected error has occurred"
-msgstr "Odottamaton virhe on tapahtunut"
+#: app/auth/forms.py:12 app/auth/forms.py:20 app/auth/forms.py:43
+msgid "Password"
+msgstr "Salasana"
 
-#: app/templates/500.html:5
-msgid "The administrator has been notified. Sorry for the inconvenience!"
-msgstr "Ylläpitäjälle on ilmoitettu. Anteeksi häiriö!"
+#: app/auth/forms.py:13
+msgid "Remember Me"
+msgstr "Muista minut"
+
+#: app/auth/forms.py:14 app/auth/routes.py:29 app/templates/auth/login.html:5
+msgid "Sign In"
+msgstr "Kirjaudu sisään"
+
+#: app/auth/forms.py:19 app/auth/forms.py:38
+msgid "Email"
+msgstr "Sähköposti"
+
+#: app/auth/forms.py:22 app/auth/forms.py:45
+msgid "Repeat Password"
+msgstr "Toista salasana"
+
+#: app/auth/forms.py:24 app/auth/routes.py:51
+#: app/templates/auth/register.html:5
+msgid "Register"
+msgstr "Rekisteröidy"
+
+#: app/auth/forms.py:29 app/main/forms.py:26
+msgid "Please use a different username!"
+msgstr "Käytä toista käyttäjätunnusta!"
+
+#: app/auth/forms.py:34
+msgid "Please use a different email address!"
+msgstr "Käytä toista sähköpostiosoitetta!"
+
+#: app/auth/forms.py:39 app/auth/forms.py:47
+msgid "Request Password Reset"
+msgstr "Pyydä salasanan palautusta"
+
+#: app/auth/routes.py:22
+msgid "Invalid username or password!"
+msgstr ""
+
+#: app/auth/routes.py:48
+msgid "Congratulations, you are now a registered user!"
+msgstr ""
+
+#: app/auth/routes.py:65
+msgid "Check yout email for the instructions to reset your password!"
+msgstr ""
+
+#: app/auth/routes.py:70 app/templates/auth/reset_password_request.html:5
+msgid "Reset Password"
+msgstr "Nollaa salasana"
+
+#: app/auth/routes.py:85
+msgid "Your password has been reset!"
+msgstr ""
+
+#: app/main/forms.py:14
+msgid "About me"
+msgstr "Minusta"
+
+#: app/main/forms.py:16 app/main/forms.py:30 app/main/forms.py:38
+msgid "Submit"
+msgstr "Lähetä"
+
+#: app/main/forms.py:35
+msgid "Say something"
+msgstr ""
+
+#: app/main/forms.py:42 app/main/routes.py:189
+#, fuzzy
+msgid "Search"
+msgstr "Käyttäjä"
+
+#: app/main/routes.py:42
+msgid "Your post is now live!"
+msgstr ""
+
+#: app/main/routes.py:54
+msgid "Home Page"
+msgstr ""
+
+#: app/main/routes.py:91
+msgid "Your changes have been saved!"
+msgstr ""
+
+#: app/main/routes.py:108 app/main/routes.py:127
+#, fuzzy, python-format
+msgid "User %(username)s not found!"
+msgstr "Hei, %(username)s!"
+
+#: app/main/routes.py:111
+msgid "You cannot follow yourself!"
+msgstr ""
+
+#: app/main/routes.py:115
+#, fuzzy, python-format
+msgid "You are following %(username)s!"
+msgstr "Hei, %(username)s!"
+
+#: app/main/routes.py:130
+msgid "You cannot unfollow yourself!"
+msgstr ""
+
+#: app/main/routes.py:134
+#, fuzzy, python-format
+msgid "You are not following %(username)s!"
+msgstr "Hei, %(username)s!"
+
+#: app/main/routes.py:152 app/templates/base.html:47
+msgid "Explore"
+msgstr "Tutkia"
 
 #: app/templates/_post.html:14
 #, python-format
@@ -119,19 +173,15 @@ msgstr "Tervetuloa Mikroblogiin"
 msgid "Home"
 msgstr "Koti"
 
-#: app/templates/base.html:47
-msgid "Explore"
-msgstr "Tutkia"
-
-#: app/templates/base.html:51
+#: app/templates/base.html:58
 msgid "Login"
 msgstr "Kirjaudu sisään"
 
-#: app/templates/base.html:53
+#: app/templates/base.html:60
 msgid "Profile"
 msgstr "Profiili"
 
-#: app/templates/base.html:54
+#: app/templates/base.html:61
 msgid "Logout"
 msgstr "Kirjautua ulos"
 
@@ -152,29 +202,17 @@ msgstr "Uudemmat viestit"
 msgid "Older posts"
 msgstr "Vanhemmat viestit"
 
-#: app/templates/login.html:12
-msgid "New User?"
-msgstr "Uusi käyttäjä?"
+#: app/templates/search.html:4
+msgid "Search Result"
+msgstr ""
 
-#: app/templates/login.html:12
-msgid "Click to Register!"
-msgstr "Klikkaa rekisteröityäksesi!"
+#: app/templates/search.html:13
+msgid "Previous results"
+msgstr ""
 
-#: app/templates/login.html:14
-msgid "Forgot Your Password?"
-msgstr "Unohditko salasanasi?"
-
-#: app/templates/login.html:15
-msgid "Click to Reset It"
-msgstr "Klikkaa nollataksesi sen"
-
-#: app/templates/reset_password.html:5
-msgid "Reset Your Password"
-msgstr "Nollaa salasanasi"
-
-#: app/templates/reset_password_request.html:5
-msgid "Reset Password"
-msgstr "Nollaa salasana"
+#: app/templates/search.html:18
+msgid "Next results"
+msgstr ""
 
 #: app/templates/user.html:8
 msgid "User"
@@ -203,4 +241,40 @@ msgstr "Seuraa"
 #: app/templates/user.html:27
 msgid "Unfollow"
 msgstr "Lopeta seuraaminen"
+
+#: app/templates/auth/login.html:12
+msgid "New User?"
+msgstr "Uusi käyttäjä?"
+
+#: app/templates/auth/login.html:12
+msgid "Click to Register!"
+msgstr "Klikkaa rekisteröityäksesi!"
+
+#: app/templates/auth/login.html:14
+msgid "Forgot Your Password?"
+msgstr "Unohditko salasanasi?"
+
+#: app/templates/auth/login.html:15
+msgid "Click to Reset It"
+msgstr "Klikkaa nollataksesi sen"
+
+#: app/templates/auth/reset_password.html:5
+msgid "Reset Your Password"
+msgstr "Nollaa salasanasi"
+
+#: app/templates/errors/404.html:4
+msgid "Page Not Found"
+msgstr "Sivua ei löydetty"
+
+#: app/templates/errors/404.html:5 app/templates/errors/500.html:6
+msgid "Return to the Main Page"
+msgstr "Palaa pääsivulle"
+
+#: app/templates/errors/500.html:4
+msgid "An unexpected error has occurred"
+msgstr "Odottamaton virhe on tapahtunut"
+
+#: app/templates/errors/500.html:5
+msgid "The administrator has been notified. Sorry for the inconvenience!"
+msgstr "Ylläpitäjälle on ilmoitettu. Anteeksi häiriö!"
 

@@ -115,3 +115,8 @@ Setup the latest Elasticsearch version following the steps as described at Elast
 https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html
 
 Add Elasticsearch URL to your ```.env``` file as ```ELASTICSEARCH_URL```. Search engine may be switched to another technology by updating ```app/search.py``` module. The model may be included in search engine by providing inheritance from ```SearchableMixin``` mixin.
+
+## To-Do List
+
+* 404 on ```/``` page
+* Check Translator

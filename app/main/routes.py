@@ -105,14 +105,14 @@ def follow(username):
     if form.validate_on_submit():
         user = User.query.filter_by(username=username).first()
         if not user:
-            flash(_(f'User {username} not found!'))
+            flash(_('User %(username)s not found!', username=username))
             return redirect(url_for('main.index'))
         if user == current_user:
             flash(_('You cannot follow yourself!'))
             return redirect(url_for('main.user', username=username))
         current_user.follow(user)
         db.session.commit()
-        flash(_(f'You are following {username}!'))
+        flash(_('You are following %(username)s!', username=username))
         return redirect(url_for('main.user', username=username))
     return redirect(url_for('main.index'))
 
@@ -124,14 +124,14 @@ def unfollow(username):
     if form.validate_on_submit():
         user = User.query.filter_by(username=username).first()
         if not user:
-            flash(_(f'User {username} not found!'))
+            flash(_('User %(username)s not found!', username=username))
             return redirect(url_for('main.index'))
         if user == current_user:
-            flash(_('You cannot unfollow yourself!'))
+            flash(_('You cannot unfollow yourself!', username=username))
             return redirect(url_for('main.user', username=username))
         current_user.unfollow(user)
         db.session.commit()
-        flash(_(f'You are not following {username}!'))
+        flash(_('You are not following %(username)s!'))
         return redirect(url_for('main.user', username=username))
     return redirect(url_for('main.index'))
 

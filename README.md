@@ -109,3 +109,9 @@ Click the "Review + create" button & then "Create", the translator API resource 
 
 To obtain the key click the "Go to resource" button & then find the "Keys and Endpoint" option on the left sidebar. Copy one of the keys & the name of the region to your ```.env``` file as ```MS_TRANSLATOR_KEY``` and ```MS_TRANSLATOR_REGION_NAME``` respectively. 
 
+## Elasticsearch
+
+Setup the latest Elasticsearch version following the steps as described at Elasticsearch site:
+https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html
+
+Add Elasticsearch URL to your ```.env``` file as ```ELASTICSEARCH_URL```. Search engine may be switched to another technology by updating ```app/search.py``` module. The model may be included in search engine by providing inheritance from ```SearchableMixin``` mixin.

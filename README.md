@@ -56,6 +56,8 @@ MAIL_PORT=8025          # mail server port
 
 MS_TRANSLATOR_KEY=paste_your_key                  # Microsoft Azure Translator key
 MS_TRANSLATOR_REGION_NAME=paste_your_region_name  # Microsoft Azure Translator region name
+
+ELASTICSEARCH_URL=paste_your_elasticsearch_url    # Elasticsearch URL
 ```
 
 Run app:

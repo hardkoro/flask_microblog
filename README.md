@@ -4,7 +4,26 @@
 
 App allows to create text posts for logged in users, to follow & unfollow other users, to translate posts written in different languages, supports localization for 🇷🇺, 🇬🇧 & 🇫🇮.
 
-## Install
+## Technology Stack
+
+[![Python](https://img.shields.io/badge/-Python-464646??style=flat-square&logo=Python)](https://www.python.org/)
+[![Flask](https://img.shields.io/badge/-Flask-464646??style=flat-square&logo=Flask)](https://flask.palletsprojects.com/en/2.0.x/)
+[![SQL%20Alchemy](https://img.shields.io/badge/-SQL%20Alchemy-464646??style=flat-square&logo=SQL%20Alchemy)](https://www.sqlalchemy.org/)
+[![Bootstrap](https://img.shields.io/badge/-Bootstrap-464646??style=flat-square&logo=Bootstrap)](https://getbootstrap.com/)
+[![Babel](https://img.shields.io/badge/-Babel-464646??style=flat-square&logo=Babel)](https://babel.pocoo.org/en/latest/)
+[![Azure%20Translator](https://img.shields.io/badge/-Azure%20Translator-464646??style=flat-square&logo=Azure)](https://azure.microsoft.com/en-us/services/cognitive-services/translator/)
+[![MomentJS](https://img.shields.io/badge/-MomentJS-464646??style=flat-square&logo=MomentJS)](https://momentjs.com/)
+
+- Python
+- Flask
+- SQL Alchemy
+- Bootstrap
+- Babel
+- Azure Translator
+- MomentJS
+- Elasticsearch
+
+## Deployment
 
 Clone the repo and change directory to the cloned repo:
 

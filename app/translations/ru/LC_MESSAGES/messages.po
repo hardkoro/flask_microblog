@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-02-13 18:53+0300\n"
+"POT-Creation-Date: 2022-02-14 15:32+0300\n"
 "PO-Revision-Date: 2022-02-10 20:58+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -86,8 +86,9 @@ msgid "Congratulations, you are now a registered user!"
 msgstr "Подзравляем, теперь вы зарегестрированный пользователь!"
 
 #: app/auth/routes.py:65
-msgid "Check your email for the instructions to reset your password!"
-msgstr "Проверьте письмо с инструкциями по смене пароля на вашей электронной почте!"
+#, fuzzy
+msgid "Check yout email for the instructions to reset your password!"
+msgstr "Проверьте письмо с инструкциями на вашей электронной почте!"
 
 #: app/auth/routes.py:70 app/templates/auth/reset_password_request.html:5
 msgid "Reset Password"

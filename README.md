@@ -77,6 +77,8 @@ MS_TRANSLATOR_KEY=paste_your_key                  # Microsoft Azure Translator k
 MS_TRANSLATOR_REGION_NAME=paste_your_region_name  # Microsoft Azure Translator region name
 
 ELASTICSEARCH_URL=paste_your_elasticsearch_url    # Elasticsearch URL
+
+LOG_TO_STDOUT=1   # specifies logging to stdout (e.g. for Heroku)
 ```
 
 Run app:

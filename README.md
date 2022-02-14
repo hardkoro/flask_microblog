@@ -13,6 +13,7 @@ App allows to create text posts for logged in users, to follow & unfollow other 
 [![Babel](https://img.shields.io/badge/-Babel-464646??style=flat-square&logo=Babel)](https://babel.pocoo.org/en/latest/)
 [![Azure%20Translator](https://img.shields.io/badge/-Azure%20Translator-464646??style=flat-square&logo=microsoftazure)](https://azure.microsoft.com/en-us/services/cognitive-services/translator/)
 [![MomentJS](https://img.shields.io/badge/-MomentJS-464646??style=flat-square&logo=javascript)](https://momentjs.com/)
+[![Heroku](https://img.shields.io/badge/-Heroku-464646??style=flat-square&logo=heroku)](https://www.heroku.com/)
 
 - Python
 - Flask
@@ -22,6 +23,7 @@ App allows to create text posts for logged in users, to follow & unfollow other 
 - Azure Translator
 - MomentJS
 - Elasticsearch
+- Heroku
 
 ## Deployment
 
@@ -137,7 +139,57 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elastics
 
 Add Elasticsearch URL to your ```.env``` file as ```ELASTICSEARCH_URL```. Search engine may be switched to another technology by updating ```app/search.py``` module. The model may be included in search engine by providing inheritance from ```SearchableMixin``` mixin.
 
+## Heroku Deployment
+
+Login to Heroku via Heroku CLI:
+
+```bash
+heroku login
+```
+
+Create an application:
+
+```bash
+heroku apps:create hk-flask-microblog
+```
+
+Add Heroku Postgres database:
+
+```bash
+heroku addons:add heroku-postgresql:hobby-dev
+```
+
+As Heroku requires logs to be outputted to ```stdout``` set an environment variable ```LOG_TO_STDOUT```:
+
+```bash
+heroku config:set LOG_TO_STDOUT=`
+```
+
+Add Elasticsearch hosting via SearchBox add-on:
+
+```bash
+heroku addons:create searchbox:starter
+```
+
+Get ```SEARCHBOX_URL``` environment variable from Elasticsearch service & set the correspondent ```ELASTICSEARCH_URL``` variable:
+
+```bash
+heroku config:get SEARCHBOX_URL
+heroku config:set ELASTICSEARCH_URL=<your-elastic-search-url>
+```
+
+Set remaining ```.env``` & ```.flaskenv``` variables as follows:
+
+```bash
+heroku config:set ENV_VAR_NAME=env_var_value
+```
+
+Start the deployment:
+
+```bash
+git push heroku master
+```
+
 ## To-Do List
 
-* 404 on ```/``` page
-* Check Translator
+* Resolve Heroku Deployment

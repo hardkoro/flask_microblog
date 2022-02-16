@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-02-14 15:32+0300\n"
+"POT-Creation-Date: 2022-02-16 20:13+0300\n"
 "PO-Revision-Date: 2022-02-10 20:58+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -110,7 +110,7 @@ msgstr "Отправить"
 msgid "Say something"
 msgstr "Напишите что-нибудь"
 
-#: app/main/forms.py:42 app/main/routes.py:189
+#: app/main/forms.py:42 app/main/routes.py:197
 #, fuzzy
 msgid "Search"
 msgstr "Пользователь"
@@ -123,43 +123,43 @@ msgstr "Ваш пост теперь видят все!"
 msgid "Home Page"
 msgstr "Домашняя страница"
 
-#: app/main/routes.py:91
+#: app/main/routes.py:99
 msgid "Your changes have been saved!"
 msgstr "Ваши изменения были сохранены!"
 
-#: app/main/routes.py:108 app/main/routes.py:127
+#: app/main/routes.py:116 app/main/routes.py:135
 #, fuzzy, python-format
 msgid "User %(username)s not found!"
 msgstr "Привет, %(username)s!"
 
-#: app/main/routes.py:111
+#: app/main/routes.py:119
 msgid "You cannot follow yourself!"
 msgstr "Вы неможете подписаться сами на себя!"
 
-#: app/main/routes.py:115
+#: app/main/routes.py:123
 #, fuzzy, python-format
 msgid "You are following %(username)s!"
 msgstr "Привет, %(username)s!"
 
-#: app/main/routes.py:130
+#: app/main/routes.py:138
 msgid "You cannot unfollow yourself!"
 msgstr "Вы не можете отписаться от самого себя!"
 
-#: app/main/routes.py:134
+#: app/main/routes.py:142
 #, fuzzy, python-format
 msgid "You are not following %(username)s!"
 msgstr "Привет, %(username)s!"
 
-#: app/main/routes.py:152 app/templates/base.html:47
+#: app/main/routes.py:160 app/templates/base.html:92
 msgid "Explore"
 msgstr "Бездна"
 
-#: app/templates/_post.html:14
+#: app/templates/_post.html:16
 #, python-format
 msgid "%(username)s said %(when)s"
 msgstr "%(username)s написал(а) %(when)s"
 
-#: app/templates/_post.html:25
+#: app/templates/_post.html:27
 msgid "Translate"
 msgstr "Перевести"
 
@@ -167,23 +167,23 @@ msgstr "Перевести"
 msgid "Error! Could not contact server."
 msgstr "Ошибка! Нет доступа к серверу переводчика."
 
-#: app/templates/base.html:28
+#: app/templates/base.html:73
 msgid "Welcome to Microblog"
 msgstr "Добро пожаловать в Microblog"
 
-#: app/templates/base.html:46
+#: app/templates/base.html:91
 msgid "Home"
 msgstr "Главная"
 
-#: app/templates/base.html:58
+#: app/templates/base.html:103
 msgid "Login"
 msgstr "Войти"
 
-#: app/templates/base.html:60
+#: app/templates/base.html:105
 msgid "Profile"
 msgstr "Профиль"
 
-#: app/templates/base.html:61
+#: app/templates/base.html:106
 msgid "Logout"
 msgstr "Выйти"
 
@@ -220,27 +220,27 @@ msgstr "Следующая страница"
 msgid "User"
 msgstr "Пользователь"
 
-#: app/templates/user.html:11
-msgid "Last seen on:"
-msgstr "Последняя активность:"
+#: app/templates/user.html:11 app/templates/user_popup.html:11
+msgid "Last seen on"
+msgstr "Последняя активность"
 
-#: app/templates/user.html:13
+#: app/templates/user.html:13 app/templates/user_popup.html:13
 msgid "followers"
 msgstr "подписчиков"
 
-#: app/templates/user.html:13
+#: app/templates/user.html:13 app/templates/user_popup.html:13
 msgid "following"
-msgstr "подписантов"
+msgstr "подписан на"
 
 #: app/templates/user.html:15
 msgid "Edit your profile"
 msgstr "Редактировать свой профиль"
 
-#: app/templates/user.html:20
+#: app/templates/user.html:20 app/templates/user_popup.html:20
 msgid "Follow"
 msgstr "Добавить в свою ленту"
 
-#: app/templates/user.html:27
+#: app/templates/user.html:27 app/templates/user_popup.html:29
 msgid "Unfollow"
 msgstr "Убрать из своей ленты"
 

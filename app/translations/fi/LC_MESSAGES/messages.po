@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-02-14 15:32+0300\n"
+"POT-Creation-Date: 2022-02-16 20:13+0300\n"
 "PO-Revision-Date: 2022-02-10 20:59+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fi\n"
@@ -85,7 +85,8 @@ msgid "Congratulations, you are now a registered user!"
 msgstr "Onnittelut, olet nyt rekisteröitynyt käyttäjä!"
 
 #: app/auth/routes.py:65
-msgid "Check your email for the instructions to reset your password!"
+#, fuzzy
+msgid "Check yout email for the instructions to reset your password!"
 msgstr "Tarkista sähköpostistasi ohjeet salasanan vaihtamiseen!"
 
 #: app/auth/routes.py:70 app/templates/auth/reset_password_request.html:5
@@ -108,7 +109,7 @@ msgstr "Lähetä"
 msgid "Say something"
 msgstr "Sano jotain"
 
-#: app/main/forms.py:42 app/main/routes.py:189
+#: app/main/forms.py:42 app/main/routes.py:197
 #, fuzzy
 msgid "Search"
 msgstr "Käyttäjä"
@@ -121,43 +122,43 @@ msgstr "Viestisi on nyt julkaistu!"
 msgid "Home Page"
 msgstr "Kotisivu"
 
-#: app/main/routes.py:91
+#: app/main/routes.py:99
 msgid "Your changes have been saved!"
 msgstr "Muutoksesi on tallennettu!"
 
-#: app/main/routes.py:108 app/main/routes.py:127
+#: app/main/routes.py:116 app/main/routes.py:135
 #, fuzzy, python-format
 msgid "User %(username)s not found!"
 msgstr "Hei, %(username)s!"
 
-#: app/main/routes.py:111
+#: app/main/routes.py:119
 msgid "You cannot follow yourself!"
 msgstr "Et voi seurata itseäsi!"
 
-#: app/main/routes.py:115
+#: app/main/routes.py:123
 #, fuzzy, python-format
 msgid "You are following %(username)s!"
 msgstr "Hei, %(username)s!"
 
-#: app/main/routes.py:130
+#: app/main/routes.py:138
 msgid "You cannot unfollow yourself!"
 msgstr "Et voi lopettaa itsesi seuraamista!"
 
-#: app/main/routes.py:134
+#: app/main/routes.py:142
 #, fuzzy, python-format
 msgid "You are not following %(username)s!"
 msgstr "Hei, %(username)s!"
 
-#: app/main/routes.py:152 app/templates/base.html:47
+#: app/main/routes.py:160 app/templates/base.html:92
 msgid "Explore"
 msgstr "Tutkia"
 
-#: app/templates/_post.html:14
+#: app/templates/_post.html:16
 #, python-format
 msgid "%(username)s said %(when)s"
 msgstr "%(username)s sanoi %(when)s"
 
-#: app/templates/_post.html:25
+#: app/templates/_post.html:27
 msgid "Translate"
 msgstr "Kääntää"
 
@@ -165,23 +166,23 @@ msgstr "Kääntää"
 msgid "Error! Could not contact server."
 msgstr "Virhe! Ei saatu yhteyttä palvelimeen."
 
-#: app/templates/base.html:28
+#: app/templates/base.html:73
 msgid "Welcome to Microblog"
 msgstr "Tervetuloa Mikroblogiin"
 
-#: app/templates/base.html:46
+#: app/templates/base.html:91
 msgid "Home"
 msgstr "Koti"
 
-#: app/templates/base.html:58
+#: app/templates/base.html:103
 msgid "Login"
 msgstr "Kirjaudu sisään"
 
-#: app/templates/base.html:60
+#: app/templates/base.html:105
 msgid "Profile"
 msgstr "Profiili"
 
-#: app/templates/base.html:61
+#: app/templates/base.html:106
 msgid "Logout"
 msgstr "Kirjautua ulos"
 
@@ -218,27 +219,30 @@ msgstr "Seuraavat tulokset"
 msgid "User"
 msgstr "Käyttäjä"
 
-#: app/templates/user.html:11
-msgid "Last seen on:"
+#: app/templates/user.html:11 app/templates/user_popup.html:11
+#, fuzzy
+msgid "Last seen on"
 msgstr "Viimeksi nähty"
 
-#: app/templates/user.html:13
+#: app/templates/user.html:13 app/templates/user_popup.html:13
+#, fuzzy
 msgid "followers"
-msgstr "seuraajaa"
+msgstr "tilaaja"
 
-#: app/templates/user.html:13
+#: app/templates/user.html:13 app/templates/user_popup.html:13
+#, fuzzy
 msgid "following"
-msgstr "seuraavaa"
+msgstr "tilannut"
 
 #: app/templates/user.html:15
 msgid "Edit your profile"
 msgstr "Muokkaa profiiliasi"
 
-#: app/templates/user.html:20
+#: app/templates/user.html:20 app/templates/user_popup.html:20
 msgid "Follow"
 msgstr "Seuraa"
 
-#: app/templates/user.html:27
+#: app/templates/user.html:27 app/templates/user_popup.html:29
 msgid "Unfollow"
 msgstr "Lopeta seuraaminen"
 

@@ -139,6 +139,16 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elastics
 
 Add Elasticsearch URL to your ```.env``` file as ```ELASTICSEARCH_URL```. Search engine may be switched to another technology by updating ```app/search.py``` module. The model may be included in search engine by providing inheritance from ```SearchableMixin``` mixin.
 
+If the search is being added to the service with some existing posts, then posts should have to be indexed as follows:
+
+```bash
+flask shell
+
+from app.search import add_to_index
+from post in Post.query.all():
+	add_to_index('post', post)
+```
+
 ## Heroku Deployment
 
 Login to Heroku via Heroku CLI:
@@ -171,12 +181,16 @@ Add Elasticsearch hosting via SearchBox add-on:
 heroku addons:create searchbox:starter
 ```
 
-Get ```SEARCHBOX_URL``` environment variable from Elasticsearch service & set the correspondent ```ELASTICSEARCH_URL``` variable:
+Get ```SEARCHBOX_URL``` environment variable from Elasticsearch service & set the correspondent ```ELASTICSEARCH_URL``` variable*:
 
 ```bash
 heroku config:get SEARCHBOX_URL
 heroku config:set ELASTICSEARCH_URL=<your-elastic-search-url>
 ```
+
+*don't forget to add port to the URL as the setup requires scheme, host & port (443 by default for SSH)
+
+Open SearchBox Elasticsearch resource panel and manually create an index for Post model via Dashboard > Indices > New index. 
 
 Set remaining ```.env``` & ```.flaskenv``` variables as follows:
 
@@ -189,7 +203,3 @@ Start the deployment:
 ```bash
 git push heroku master
 ```
-
-## To-Do List
-
-* Resolve Heroku Deployment

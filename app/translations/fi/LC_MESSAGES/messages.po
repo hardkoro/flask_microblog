@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-02-16 20:13+0300\n"
+"POT-Creation-Date: 2022-02-17 20:29+0300\n"
 "PO-Revision-Date: 2022-02-10 20:59+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fi\n"
@@ -102,6 +102,7 @@ msgid "About me"
 msgstr "Minusta"
 
 #: app/main/forms.py:16 app/main/forms.py:30 app/main/forms.py:38
+#: app/main/forms.py:57
 msgid "Submit"
 msgstr "Lähetä"
 
@@ -113,6 +114,11 @@ msgstr "Sano jotain"
 #, fuzzy
 msgid "Search"
 msgstr "Käyttäjä"
+
+#: app/main/forms.py:54
+#, fuzzy
+msgid "Message"
+msgstr "Kotisivu"
 
 #: app/main/routes.py:42
 msgid "Your post is now live!"
@@ -153,6 +159,15 @@ msgstr "Hei, %(username)s!"
 msgid "Explore"
 msgstr "Tutkia"
 
+#: app/main/routes.py:215
+#, fuzzy
+msgid "Your message has been sent!"
+msgstr "Salasanasi on nollattu!"
+
+#: app/main/routes.py:218
+msgid "Send message"
+msgstr "Lähetä viesti"
+
 #: app/templates/_post.html:16
 #, python-format
 msgid "%(username)s said %(when)s"
@@ -179,10 +194,14 @@ msgid "Login"
 msgstr "Kirjaudu sisään"
 
 #: app/templates/base.html:105
+msgid "Messages"
+msgstr "Viestit"
+
+#: app/templates/base.html:106
 msgid "Profile"
 msgstr "Profiili"
 
-#: app/templates/base.html:106
+#: app/templates/base.html:107
 msgid "Logout"
 msgstr "Kirjautua ulos"
 
@@ -195,11 +214,11 @@ msgstr "Muokkaa profiilia"
 msgid "Hello, %(username)s!"
 msgstr "Hei, %(username)s!"
 
-#: app/templates/index.html:20 app/templates/user.html:43
+#: app/templates/index.html:20 app/templates/user.html:50
 msgid "Newer posts"
 msgstr "Uudemmat viestit"
 
-#: app/templates/index.html:25 app/templates/user.html:48
+#: app/templates/index.html:25 app/templates/user.html:55
 msgid "Older posts"
 msgstr "Vanhemmat viestit"
 
@@ -215,36 +234,45 @@ msgstr "Aiemmat tulokset"
 msgid "Next results"
 msgstr "Seuraavat tulokset"
 
+#: app/templates/send_message.html:5
+#, python-format
+msgid "Send message to %(recipient)s"
+msgstr "Lähetä viesti %(recipient)sssa"
+
 #: app/templates/user.html:8
 msgid "User"
 msgstr "Käyttäjä"
 
-#: app/templates/user.html:11 app/templates/user_popup.html:11
+#: app/templates/user.html:13 app/templates/user_popup.html:11
 #, fuzzy
 msgid "Last seen on"
 msgstr "Viimeksi nähty"
 
-#: app/templates/user.html:13 app/templates/user_popup.html:13
+#: app/templates/user.html:15 app/templates/user_popup.html:13
 #, fuzzy
 msgid "followers"
 msgstr "tilaaja"
 
-#: app/templates/user.html:13 app/templates/user_popup.html:13
+#: app/templates/user.html:15 app/templates/user_popup.html:13
 #, fuzzy
 msgid "following"
 msgstr "tilannut"
 
-#: app/templates/user.html:15
+#: app/templates/user.html:17
 msgid "Edit your profile"
 msgstr "Muokkaa profiiliasi"
 
-#: app/templates/user.html:20 app/templates/user_popup.html:20
+#: app/templates/user.html:22 app/templates/user_popup.html:20
 msgid "Follow"
 msgstr "Seuraa"
 
-#: app/templates/user.html:27 app/templates/user_popup.html:29
+#: app/templates/user.html:29 app/templates/user_popup.html:29
 msgid "Unfollow"
 msgstr "Lopeta seuraaminen"
+
+#: app/templates/user.html:35
+msgid "Send private message"
+msgstr "Lähetä yksitysviesti"
 
 #: app/templates/auth/login.html:12
 msgid "New User?"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-02-16 20:13+0300\n"
+"POT-Creation-Date: 2022-02-17 20:29+0300\n"
 "PO-Revision-Date: 2022-02-10 20:58+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -103,6 +103,7 @@ msgid "About me"
 msgstr "О себе"
 
 #: app/main/forms.py:16 app/main/forms.py:30 app/main/forms.py:38
+#: app/main/forms.py:57
 msgid "Submit"
 msgstr "Отправить"
 
@@ -114,6 +115,11 @@ msgstr "Напишите что-нибудь"
 #, fuzzy
 msgid "Search"
 msgstr "Пользователь"
+
+#: app/main/forms.py:54
+#, fuzzy
+msgid "Message"
+msgstr "Домашняя страница"
 
 #: app/main/routes.py:42
 msgid "Your post is now live!"
@@ -154,6 +160,15 @@ msgstr "Привет, %(username)s!"
 msgid "Explore"
 msgstr "Бездна"
 
+#: app/main/routes.py:215
+#, fuzzy
+msgid "Your message has been sent!"
+msgstr "Ваш пароль был сброшен!"
+
+#: app/main/routes.py:218
+msgid "Send message"
+msgstr "Отправить сообщение"
+
 #: app/templates/_post.html:16
 #, python-format
 msgid "%(username)s said %(when)s"
@@ -180,10 +195,14 @@ msgid "Login"
 msgstr "Войти"
 
 #: app/templates/base.html:105
+msgid "Messages"
+msgstr "Сообщения"
+
+#: app/templates/base.html:106
 msgid "Profile"
 msgstr "Профиль"
 
-#: app/templates/base.html:106
+#: app/templates/base.html:107
 msgid "Logout"
 msgstr "Выйти"
 
@@ -196,11 +215,11 @@ msgstr "Редактировать профиль"
 msgid "Hello, %(username)s!"
 msgstr "Привет, %(username)s!"
 
-#: app/templates/index.html:20 app/templates/user.html:43
+#: app/templates/index.html:20 app/templates/user.html:50
 msgid "Newer posts"
 msgstr "Новые записи"
 
-#: app/templates/index.html:25 app/templates/user.html:48
+#: app/templates/index.html:25 app/templates/user.html:55
 msgid "Older posts"
 msgstr "Старые записи"
 
@@ -216,33 +235,42 @@ msgstr "Предыдущая страница"
 msgid "Next results"
 msgstr "Следующая страница"
 
+#: app/templates/send_message.html:5
+#, python-format
+msgid "Send message to %(recipient)s"
+msgstr "Отправить сообщение %(recipient)s"
+
 #: app/templates/user.html:8
 msgid "User"
 msgstr "Пользователь"
 
-#: app/templates/user.html:11 app/templates/user_popup.html:11
+#: app/templates/user.html:13 app/templates/user_popup.html:11
 msgid "Last seen on"
 msgstr "Последняя активность"
 
-#: app/templates/user.html:13 app/templates/user_popup.html:13
+#: app/templates/user.html:15 app/templates/user_popup.html:13
 msgid "followers"
 msgstr "подписчиков"
 
-#: app/templates/user.html:13 app/templates/user_popup.html:13
+#: app/templates/user.html:15 app/templates/user_popup.html:13
 msgid "following"
 msgstr "подписан на"
 
-#: app/templates/user.html:15
+#: app/templates/user.html:17
 msgid "Edit your profile"
 msgstr "Редактировать свой профиль"
 
-#: app/templates/user.html:20 app/templates/user_popup.html:20
+#: app/templates/user.html:22 app/templates/user_popup.html:20
 msgid "Follow"
 msgstr "Добавить в свою ленту"
 
-#: app/templates/user.html:27 app/templates/user_popup.html:29
+#: app/templates/user.html:29 app/templates/user_popup.html:29
 msgid "Unfollow"
 msgstr "Убрать из своей ленты"
+
+#: app/templates/user.html:35
+msgid "Send private message"
+msgstr "Отправить личное сообщение"
 
 #: app/templates/auth/login.html:12
 msgid "New User?"

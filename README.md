@@ -14,6 +14,7 @@ App allows to create text posts for logged in users, to follow & unfollow other 
 [![Azure%20Translator](https://img.shields.io/badge/-Azure%20Translator-464646??style=flat-square&logo=microsoftazure)](https://azure.microsoft.com/en-us/services/cognitive-services/translator/)
 [![MomentJS](https://img.shields.io/badge/-MomentJS-464646??style=flat-square&logo=javascript)](https://momentjs.com/)
 [![Heroku](https://img.shields.io/badge/-Heroku-464646??style=flat-square&logo=heroku)](https://www.heroku.com/)
+[![Docker](https://img.shields.io/badge/-Docker-464646??style=flat-square&logo=docker)](https://www.docker.com/)
 
 - Python
 - Flask
@@ -24,6 +25,7 @@ App allows to create text posts for logged in users, to follow & unfollow other 
 - MomentJS
 - Elasticsearch
 - Heroku
+- Docker
 
 ## Deployment
 
@@ -203,3 +205,57 @@ Start the deployment:
 ```bash
 git push heroku master
 ```
+
+## Docker Deployment
+
+Install Docker & Docker-compose:
+
+```bash
+sudo apt-get remove docker docker-engine docker.io containerd runc
+sudo apt-get update
+sudo apt-get install \
+  ca-certificates \
+  curl \
+  gnupg \
+  lsb-release
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
+
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
+Create ```.env``` file & fill it with environment variables as follows (assuming PostgreSQL usage):
+
+```bash
+touch .env
+cat >> .env
+
+SECRET_KEY=paste_your_secret_key      # app's secret key
+DATABASE_URL=postgresql://postgres_user:postgres_pwd@db/postgres_db	# Postgres DB URL (container db)
+POSTGRES_USER=postgres_user	# Postgres user
+POSTGRES_PASSWORD=postgres_pws	# Postgres password
+POSTGRES_DB=postgres_db		# Postgres database name
+MAIL_SERVER=localhost   # mail server host
+MAIL_PORT=8025          # mail server port
+
+MS_TRANSLATOR_KEY=paste_your_key                  # Microsoft Azure Translator key
+MS_TRANSLATOR_REGION_NAME=paste_your_region_name  # Microsoft Azure Translator region name
+
+ELASTICSEARCH_URL=http://es:9200    # Elasticsearch URL (container es)
+```
+
+Run containers:
+
+```bash
+docker-compose up -d
+```
+
+The service will be running at http://localhost:8000/

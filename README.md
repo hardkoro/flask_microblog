@@ -15,6 +15,7 @@ App allows to create text posts for logged in users, to follow & unfollow other 
 [![MomentJS](https://img.shields.io/badge/-MomentJS-464646??style=flat-square&logo=javascript)](https://momentjs.com/)
 [![Heroku](https://img.shields.io/badge/-Heroku-464646??style=flat-square&logo=heroku)](https://www.heroku.com/)
 [![Docker](https://img.shields.io/badge/-Docker-464646??style=flat-square&logo=docker)](https://www.docker.com/)
+[![Redis](https://img.shields.io/badge/-Redis-464646??style=flat-square&logo=redis)](https://redis.io/)
 
 - Python
 - Flask
@@ -26,6 +27,7 @@ App allows to create text posts for logged in users, to follow & unfollow other 
 - Elasticsearch
 - Heroku
 - Docker
+- Redis
 
 ## Deployment
 
@@ -259,3 +261,32 @@ docker-compose up -d
 ```
 
 The service will be running at http://localhost:8000/
+
+## Configuring Redis
+
+Install Redis:
+
+```bash
+sudo apt update
+sudo apt install redis-server
+```
+
+Change ```supervised``` directive to ```systemd``` to install Redis as a service in Ubuntu:
+
+```bash
+sudo nano /etc/redis/redis.conf
+```
+
+Restart service:
+
+```bash
+sudo systemctl restart redis.service
+```
+
+Test service:
+
+```bash
+sudo systemctl status redis
+```
+
+The outpur should contain words like ```active``` / ```running``` / ```enabled```.

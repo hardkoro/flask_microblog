@@ -76,8 +76,11 @@ cat >> .env
 SECRET_KEY=paste_your_secret_key      # app's secret key
 DATABASE_URL=paste_your_database_url  # database URL
 
-MAIL_SERVER=localhost   # mail server host
-MAIL_PORT=8025          # mail server port
+MAIL_SERVER=paste_your_mail_server_host   # mail server host
+MAIL_PORT=paste_your_mail_server_port     # mail server port
+MAIL_USERNAME=paste_your_mail_username    # mail username
+MAIL_PASSWORD=paste_your_mail_password    # mail password
+MAIL_USE_TLS=paste_1_if_your_mail_server_uses_tls   # enable TLS
 
 MS_TRANSLATOR_KEY=paste_your_key                  # Microsoft Azure Translator key
 MS_TRANSLATOR_REGION_NAME=paste_your_region_name  # Microsoft Azure Translator region name
@@ -85,6 +88,12 @@ MS_TRANSLATOR_REGION_NAME=paste_your_region_name  # Microsoft Azure Translator r
 ELASTICSEARCH_URL=paste_your_elasticsearch_url    # Elasticsearch URL
 
 LOG_TO_STDOUT=1   # specifies logging to stdout (e.g. for Heroku)
+```
+
+To emulate a mail server one might use another terminal window with the following command:
+
+```bash
+python -m smtpd -n -c DebuggingServer localhost:8025
 ```
 
 Run app:
@@ -241,12 +250,16 @@ touch .env
 cat >> .env
 
 SECRET_KEY=paste_your_secret_key      # app's secret key
-DATABASE_URL=postgresql://postgres_user:postgres_pwd@db/postgres_db	# Postgres DB URL (container db)
-POSTGRES_USER=postgres_user	# Postgres user
-POSTGRES_PASSWORD=postgres_pws	# Postgres password
-POSTGRES_DB=postgres_db		# Postgres database name
-MAIL_SERVER=localhost   # mail server host
-MAIL_PORT=8025          # mail server port
+DATABASE_URL=postgresql://postgres_user:postgres_pwd@db/postgres_db   # Postgres DB URL (container db)
+POSTGRES_USER=postgres_user     # Postgres user
+POSTGRES_PASSWORD=postgres_pws  # Postgres password
+POSTGRES_DB=postgres_db         # Postgres database name
+
+MAIL_SERVER=paste_your_mail_server_host   # mail server host
+MAIL_PORT=paste_your_mail_server_port     # mail server port
+MAIL_USERNAME=paste_your_mail_username    # mail username
+MAIL_PASSWORD=paste_your_mail_password    # mail password
+MAIL_USE_TLS=paste_1_if_your_mail_server_uses_tls   # enable TLS
 
 MS_TRANSLATOR_KEY=paste_your_key                  # Microsoft Azure Translator key
 MS_TRANSLATOR_REGION_NAME=paste_your_region_name  # Microsoft Azure Translator region name
@@ -289,4 +302,4 @@ Test service:
 sudo systemctl status redis
 ```
 
-The outpur should contain words like ```active``` / ```running``` / ```enabled```.
+The output should contain words like ```active``` / ```running``` / ```enabled```.

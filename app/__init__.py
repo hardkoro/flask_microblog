@@ -70,7 +70,7 @@ def create_app(config_class=Config):
                 mailhost=(app.config['MAIL_SERVER'], app.config['MAIL_PORT']),
                 fromaddr='no_reply@' + app.config['MAIL_SERVER'],
                 toaddrs=app.config['ADMINS'],
-                subject='Microbolg Failure',
+                subject='Microblog Failure',
                 credentials=auth,
                 secure=secure
             )

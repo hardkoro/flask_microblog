@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-02-17 20:29+0300\n"
+"POT-Creation-Date: 2022-02-21 20:37+0300\n"
 "PO-Revision-Date: 2022-02-10 20:58+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 
-#: app/__init__.py:22
+#: app/__init__.py:24
 msgid "Please log in to access this page."
 msgstr "Для доступа к данной страницей войдите в свой профиль."
 
@@ -111,7 +111,7 @@ msgstr "Отправить"
 msgid "Say something"
 msgstr "Напишите что-нибудь"
 
-#: app/main/forms.py:42 app/main/routes.py:197
+#: app/main/forms.py:42 app/main/routes.py:198
 #, fuzzy
 msgid "Search"
 msgstr "Пользователь"
@@ -121,53 +121,61 @@ msgstr "Пользователь"
 msgid "Message"
 msgstr "Домашняя страница"
 
-#: app/main/routes.py:42
+#: app/main/routes.py:43
 msgid "Your post is now live!"
 msgstr "Ваш пост теперь видят все!"
 
-#: app/main/routes.py:54
+#: app/main/routes.py:55
 msgid "Home Page"
 msgstr "Домашняя страница"
 
-#: app/main/routes.py:99
+#: app/main/routes.py:100
 msgid "Your changes have been saved!"
 msgstr "Ваши изменения были сохранены!"
 
-#: app/main/routes.py:116 app/main/routes.py:135
+#: app/main/routes.py:117 app/main/routes.py:136
 #, fuzzy, python-format
 msgid "User %(username)s not found!"
 msgstr "Привет, %(username)s!"
 
-#: app/main/routes.py:119
+#: app/main/routes.py:120
 msgid "You cannot follow yourself!"
 msgstr "Вы неможете подписаться сами на себя!"
 
-#: app/main/routes.py:123
+#: app/main/routes.py:124
 #, fuzzy, python-format
 msgid "You are following %(username)s!"
 msgstr "Привет, %(username)s!"
 
-#: app/main/routes.py:138
+#: app/main/routes.py:139
 msgid "You cannot unfollow yourself!"
 msgstr "Вы не можете отписаться от самого себя!"
 
-#: app/main/routes.py:142
+#: app/main/routes.py:143
 #, fuzzy, python-format
 msgid "You are not following %(username)s!"
 msgstr "Привет, %(username)s!"
 
-#: app/main/routes.py:160 app/templates/base.html:92
+#: app/main/routes.py:161 app/templates/base.html:133
 msgid "Explore"
 msgstr "Бездна"
 
-#: app/main/routes.py:215
+#: app/main/routes.py:217
 #, fuzzy
 msgid "Your message has been sent!"
 msgstr "Ваш пароль был сброшен!"
 
-#: app/main/routes.py:218
+#: app/main/routes.py:220
 msgid "Send message"
 msgstr "Отправить сообщение"
+
+#: app/main/routes.py:266
+msgid "An export task is currently in progress"
+msgstr "В данный момент уже выполняется выгрузка"
+
+#: app/main/routes.py:268
+msgid "Exporting posts..."
+msgstr "Выгрузка постов..."
 
 #: app/templates/_post.html:16
 #, python-format
@@ -182,27 +190,27 @@ msgstr "Перевести"
 msgid "Error! Could not contact server."
 msgstr "Ошибка! Нет доступа к серверу переводчика."
 
-#: app/templates/base.html:73
+#: app/templates/base.html:114
 msgid "Welcome to Microblog"
 msgstr "Добро пожаловать в Microblog"
 
-#: app/templates/base.html:91
+#: app/templates/base.html:132
 msgid "Home"
 msgstr "Главная"
 
-#: app/templates/base.html:103
+#: app/templates/base.html:144
 msgid "Login"
 msgstr "Войти"
 
-#: app/templates/base.html:105
+#: app/templates/base.html:148 app/templates/messages.html:4
 msgid "Messages"
 msgstr "Сообщения"
 
-#: app/templates/base.html:106
+#: app/templates/base.html:156
 msgid "Profile"
 msgstr "Профиль"
 
-#: app/templates/base.html:107
+#: app/templates/base.html:157
 msgid "Logout"
 msgstr "Выйти"
 
@@ -215,13 +223,23 @@ msgstr "Редактировать профиль"
 msgid "Hello, %(username)s!"
 msgstr "Привет, %(username)s!"
 
-#: app/templates/index.html:20 app/templates/user.html:50
+#: app/templates/index.html:20 app/templates/user.html:53
 msgid "Newer posts"
 msgstr "Новые записи"
 
-#: app/templates/index.html:25 app/templates/user.html:55
+#: app/templates/index.html:25 app/templates/user.html:58
 msgid "Older posts"
 msgstr "Старые записи"
+
+#: app/templates/messages.html:12
+#, fuzzy
+msgid "Newer messages"
+msgstr "Отправить сообщение"
+
+#: app/templates/messages.html:17
+#, fuzzy
+msgid "Older messages"
+msgstr "Отправить сообщение"
 
 #: app/templates/search.html:4
 msgid "Search Result"
@@ -260,15 +278,19 @@ msgstr "подписан на"
 msgid "Edit your profile"
 msgstr "Редактировать свой профиль"
 
-#: app/templates/user.html:22 app/templates/user_popup.html:20
+#: app/templates/user.html:19
+msgid "Export your posts"
+msgstr "Выгрузить свои посты"
+
+#: app/templates/user.html:25 app/templates/user_popup.html:20
 msgid "Follow"
 msgstr "Добавить в свою ленту"
 
-#: app/templates/user.html:29 app/templates/user_popup.html:29
+#: app/templates/user.html:32 app/templates/user_popup.html:29
 msgid "Unfollow"
 msgstr "Убрать из своей ленты"
 
-#: app/templates/user.html:35
+#: app/templates/user.html:38
 msgid "Send private message"
 msgstr "Отправить личное сообщение"
 

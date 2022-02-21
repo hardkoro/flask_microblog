@@ -34,7 +34,7 @@ def _set_task_progress(progress):
 
 def export_posts(user_id):
     try:
-        user = User.query.get(id=user_id)
+        user = User.query.get(user_id)
         _set_task_progress(0)
         data, i, total_posts = [], 0, user.posts.count()
         for post in user.posts.order_by(Post.timestamp.asc()):
@@ -46,7 +46,7 @@ def export_posts(user_id):
             i += 1
             _set_task_progress(100 * i // total_posts)
         send_email(
-            subject=_('[Microblog] Your blog posts'),
+            subject='[Microblog] Your blog posts',
             recipients=[user.email],
             text_body=render_template('email/export_posts.txt', user=user),
             html_body=render_template('email/export_posts.html', user=user),

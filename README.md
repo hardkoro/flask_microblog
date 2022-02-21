@@ -86,6 +86,7 @@ MS_TRANSLATOR_KEY=paste_your_key                  # Microsoft Azure Translator k
 MS_TRANSLATOR_REGION_NAME=paste_your_region_name  # Microsoft Azure Translator region name
 
 ELASTICSEARCH_URL=paste_your_elasticsearch_url    # Elasticsearch URL
+REDIS_URL=paste_your_redis_url                    # Redis URL
 
 LOG_TO_STDOUT=1   # specifies logging to stdout (e.g. for Heroku)
 ```
@@ -195,15 +196,16 @@ heroku addons:create searchbox:starter
 heroku addons:create heroku-redis:hobby-dev
 ```
 
-Get ```SEARCHBOX_URL``` environment variable from Elasticsearch service & set the correspondent ```ELASTICSEARCH_URL``` & ```REDIS_URL``` variables*:
+Get ```SEARCHBOX_URL``` environment variable from Elasticsearch service & set the correspondent ```ELASTICSEARCH_URL``` variable*:
 
 ```bash
 heroku config:get SEARCHBOX_URL
 heroku config:set ELASTICSEARCH_URL=<your-elastic-search-url>
-heroku config:set REDIS_URL=<your-redis-url>
 ```
 
 *don't forget to add port to the URL as the setup requires scheme, host & port (443 by default for SSH)
+
+```REDIS_URL``` is going to be added to your Heroku environment automatically.
 
 Open SearchBox Elasticsearch resource panel and manually create an index for Post model via Dashboard > Indices > New index.
 
@@ -280,6 +282,7 @@ MS_TRANSLATOR_KEY=paste_your_key                  # Microsoft Azure Translator k
 MS_TRANSLATOR_REGION_NAME=paste_your_region_name  # Microsoft Azure Translator region name
 
 ELASTICSEARCH_URL=http://es:9200    # Elasticsearch URL (container es)
+REDIS_URL=redis::/redis:6379        # Redis URL (container redis)
 ```
 
 Run containers:

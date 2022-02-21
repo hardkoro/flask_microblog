@@ -17,10 +17,37 @@ services:
       - discovery.type=single-node
       - es_data:/usr/share/elasticsearch/data/
 
+  redis:
+    image: redis:6.2-alpine
+    restart: always
+    ports:
+      - "6379:6379"
+    command: redis-server --save 20 1 --loglevel warning
+    env_file:
+      - ./.env
+    volumes:
+      - cache:/data
+
+  rq-dashboard:
+    image: jaredv/rq-docker:0.0.2
+    depends_on:
+      - redis
+    command: rq-dashboard -H redis
+    ports:
+      - "9181:9181"
+
+  rq-worker:
+    image: jaredv/rq-docker:0.0.2
+    depends_on:
+      - redis
+    command: rq worker -u redis://redis:6379 microblog-tasks
+
   microblog:
     image: hardkoro/flask-microblog:latest
     depends_on:
       - db
+      - es
+      - redis
     ports:
       - "8000:5000"
     env_file:
@@ -29,3 +56,5 @@ services:
 volumes:
   postgres_data:
   es_data:
+  cache:
+    driver: local

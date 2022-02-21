@@ -31,5 +31,6 @@ class Config(object):
     MS_TRANSLATOR_REGION_NAME = os.environ.get('MS_TRANSLATOR_REGION_NAME')
 
     ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
-
     LOG_TO_STDOUT = os.environ.get('LOG_TO_STDOUT')
+
+    REDIS_URL = os.environ.get('REDIS_URL', 'redis://')

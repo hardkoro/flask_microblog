@@ -188,22 +188,24 @@ As Heroku requires logs to be outputted to ```stdout``` set an environment varia
 heroku config:set LOG_TO_STDOUT=`
 ```
 
-Add Elasticsearch hosting via SearchBox add-on:
+Add Elasticsearch hosting via SearchBox add-on & Heroku Redis add-on:
 
 ```bash
 heroku addons:create searchbox:starter
+heroku addons:create heroku-redis:hobby-dev
 ```
 
-Get ```SEARCHBOX_URL``` environment variable from Elasticsearch service & set the correspondent ```ELASTICSEARCH_URL``` variable*:
+Get ```SEARCHBOX_URL``` environment variable from Elasticsearch service & set the correspondent ```ELASTICSEARCH_URL``` & ```REDIS_URL``` variables*:
 
 ```bash
 heroku config:get SEARCHBOX_URL
 heroku config:set ELASTICSEARCH_URL=<your-elastic-search-url>
+heroku config:set REDIS_URL=<your-redis-url>
 ```
 
 *don't forget to add port to the URL as the setup requires scheme, host & port (443 by default for SSH)
 
-Open SearchBox Elasticsearch resource panel and manually create an index for Post model via Dashboard > Indices > New index. 
+Open SearchBox Elasticsearch resource panel and manually create an index for Post model via Dashboard > Indices > New index.
 
 Set remaining ```.env``` & ```.flaskenv``` variables as follows:
 
@@ -215,6 +217,19 @@ Start the deployment:
 
 ```bash
 git push heroku master
+```
+
+The corresponding Procfile should contain one web dyno & one worker:
+
+```Procfile
+web: flask db upgrade; flask translate compile; gunicorn microblog:app
+worker: rq worker -u $REDIS_URL microblog-tasks
+```
+
+After deploying, one can start the worker with the following command:
+
+```bash
+heroku ps:scale worker=1
 ```
 
 ## Docker Deployment

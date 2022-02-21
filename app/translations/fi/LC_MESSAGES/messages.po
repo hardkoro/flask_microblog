@@ -86,7 +86,7 @@ msgstr "Onnittelut, olet nyt rekisteröitynyt käyttäjä!"
 
 #: app/auth/routes.py:65
 #, fuzzy
-msgid "Check yout email for the instructions to reset your password!"
+msgid "Check your email for the instructions to reset your password!"
 msgstr "Tarkista sähköpostistasi ohjeet salasanan vaihtamiseen!"
 
 #: app/auth/routes.py:70 app/templates/auth/reset_password_request.html:5

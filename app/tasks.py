@@ -28,7 +28,7 @@ def _set_task_progress(progress):
             }
         )
         if progress >= 100:
-            task.complete = True
+            task.complete = 1
         db.session.commit()
 
 

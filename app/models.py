@@ -129,12 +129,12 @@ class User(UserMixin, db.Model):
 
     def get_tasks_in_progress(self):
         return Task.query.filter_by(
-            user=self, complete=False
+            user=self, complete=0
         ).all()
 
     def get_task_in_progress(self, name):
         return Task.query.filter_by(
-            name=name, user=self, complete=False
+            name=name, user=self, complete=0
         ).first()
 
     @staticmethod
@@ -190,7 +190,7 @@ class Task(db.Model):
     name = db.Column(db.String(128), index=True)
     description = db.Column(db.String(128))
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-    complete = db.Column(db.Integer, default=False)
+    complete = db.Column(db.Integer, default=0)
 
     def get_rq_job(self):
         try:

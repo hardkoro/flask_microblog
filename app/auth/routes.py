@@ -62,7 +62,7 @@ def reset_password_change():
         if user:
             send_password_reset_email(user)
         flash(
-            _('Check yout email for the instructions to reset your password!')
+            _('Check your email for the instructions to reset your password!')
         )
         return redirect(url_for('auth.login'))
     return render_template(

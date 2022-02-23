@@ -2,8 +2,7 @@ FROM python:slim
 RUN useradd microblog
 WORKDIR /home/microblog
 COPY . .
-RUN chown -R microblog:microblog .
-RUN chmod +x boot.sh
+RUN chown -R microblog:microblog . && chmod +x boot.sh
 USER microblog
 ENV PATH "$PATH:/home/microblog/.local/bin"
 RUN pip3 install -r requirements.txt

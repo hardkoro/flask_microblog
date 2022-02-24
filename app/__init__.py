@@ -49,7 +49,7 @@ def create_app(config_class=Config):
     from app.main import bp as main_bp  # noqa: E402
     app.register_blueprint(main_bp, url_prefix='/main')
 
-    from app.api import bp as api_bp    # noqa: E402
+    from app.api import bp as api_bp  # noqa: E402
     app.register_blueprint(api_bp, url_prefix='/api')
 
     app.elasticsearch = None

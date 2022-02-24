@@ -1,4 +1,5 @@
 from flask import url_for
+
 from app import db
 from app.search import add_to_index, query_index, remove_from_index
 
@@ -45,6 +46,7 @@ class SearchableMixin(object):
 
 db.event.listen(db.session, 'before_commit', SearchableMixin.before_commit)
 db.event.listen(db.session, 'after_commit', SearchableMixin.after_commit)
+
 
 class PaginatedAPIMixin(object):
     @staticmethod

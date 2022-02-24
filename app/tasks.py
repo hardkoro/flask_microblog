@@ -3,7 +3,6 @@ import sys
 import time
 
 from flask import render_template
-from flask_babel import _
 from rq import get_current_job
 
 from app import create_app, db
